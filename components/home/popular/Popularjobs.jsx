@@ -11,14 +11,19 @@ import {
 import styles from "./popularjobs.style";
 import { COLORS, SIZES } from "../../../constants";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
+// import db from "../../db/db"
 import useFetch from "../../../hook/useFetch";
 
 const Popularjobs = () => {
   const router = useRouter();
-  const { data, isLoading, error } = useFetch("search", {
-    query: "React developer",
-    num_pages: "1",
-  });
+  // const { data, isLoading, error } = useFetch("search",{
+  //   query: "React developer",
+  //   num_pages: "1",
+  // });
+  const { data, isLoading, error } = useFetch()
+
+  // const [isLoading] = useState(false);
+  // const [error] = useState(null);
 
   const [selectedJob, setSelectedJob] = useState();
 
@@ -26,6 +31,8 @@ const Popularjobs = () => {
     router.push(`/job-details/${item.job_id}`);
     setSelectedJob(item.job_id);
   };
+
+  // console.log(data)
 
   return (
     <View style={styles.container}>
