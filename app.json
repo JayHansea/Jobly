@@ -2,9 +2,39 @@
   "expo": {
     "scheme": "acme",
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
     },
     "name": "Jobly",
-    "slug": "Jobly"
+    "slug": "Jobly",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#043300"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#043300"
+      },
+      "package": "com.jobly.myapp"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "63b05141-8880-4299-8141-bfc7a299080c"
+      }
+    }
   }
 }
